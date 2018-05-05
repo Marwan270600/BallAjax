@@ -5,7 +5,22 @@
         protected $name;
         protected $durchmesser;
         protected $material;
-        protected $volumen;
+        //protected $volumen;
+
+        public function getName(): string
+        {
+            return $this->name;
+        }
+
+        public function getDurchmesser(): string
+        {
+            return $this->durchmesser;
+        }
+
+        public function getMaterial(): string
+        {
+            return $this->material;
+        }
 
         function __construct(string $name, float $durchmesser, string $material, float $volumen)
         {

@@ -1,5 +1,5 @@
 <?php
-    namespace Baelle;
+    namespace Baelle\BallTypes;
 
     class Ball{
         protected $name;
@@ -28,6 +28,17 @@
             $this->durchmesser = $durchmesser;
             $this->material = $material;
             $this->volumen = $volumen;
+        }
+
+        public function __toString() : string
+        {
+            
+            $rv = <<<EOT
+        Name: $this->name<br />
+        Durchmesser: $this->durchmesser<br />
+        Material: $this->material<br />
+EOT;
+            return $rv;
         }
     }
 ?>

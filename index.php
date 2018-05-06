@@ -1,13 +1,13 @@
 <?php
 
-require "./vendor/autoload.php";
+require_once "./vendor/autoload.php";
 
 
+use Baelle\BallTypes\AbstractBall;
+use Baelle\BallTypes\ball;
 
-use Baelle\ball;
-
-$ball[] = new Ball();
-$ball[] = new Ball();
+$ball[] = new ball("Fußball", 40.5,"Gummi");
+$ball[] = new ball("Basketball", 60, "Plastik");
 
 
 
@@ -20,7 +20,7 @@ $paths->setTemplatePathAndFilename(__DIR__ . '/Templates/BallListe.html');
 
 $view->assignMultiple(
     array(
-        "Baelle" => $ball
+        "Balls" => $ball
     )
 );
 

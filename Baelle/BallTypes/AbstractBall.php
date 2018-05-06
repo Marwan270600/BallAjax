@@ -1,7 +1,7 @@
 <?php
     namespace Baelle\BallTypes;
 
-    class Ball{
+    abstract class Ball{
         protected $name;
         protected $durchmesser;
         protected $material;
@@ -12,7 +12,7 @@
             return $this->name;
         }
 
-        public function getDurchmesser(): string
+        public function getDurchmesser(): float
         {
             return $this->durchmesser;
         }
@@ -22,12 +22,12 @@
             return $this->material;
         }
 
-        function __construct(string $name, float $durchmesser, string $material, float $volumen)
+        function __construct(string $name, float $durchmesser, string $material)
         {
             $this->name = $name;
             $this->durchmesser = $durchmesser;
             $this->material = $material;
-            $this->volumen = $volumen;
+
         }
 
         public function __toString() : string

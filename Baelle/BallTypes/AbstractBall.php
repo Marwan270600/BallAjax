@@ -1,7 +1,9 @@
 <?php
     namespace Baelle\BallTypes;
 
-    abstract class Ball{
+    use Baelle\Interfaces\BallInterface as BallInterface;
+
+    abstract class Ball implements BallInterface {
         protected $name;
         protected $durchmesser;
         protected $material;
@@ -39,6 +41,11 @@
         Material: $this->material<br />
 EOT;
             return $rv;
+        }
+
+        public function getVolumen(): float
+        {
+            return (1/3)*4*($this->durchmesser/2)*($this->durchmesser/2)*($this->durchmesser/2)*pi();
         }
     }
 ?>

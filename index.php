@@ -1,13 +1,27 @@
 <?php
 
+
 require_once "./vendor/autoload.php";
 
+require_once  "Baelle\BallTypes\AbstractBall.php";
+require_once  "Baelle\BallTypes\ball.php";
+include  "Baelle\BallTypes\AbstractBall.php";
+include  "Baelle\BallTypes\ball.php";
 
-use Baelle\BallTypes\AbstractBall;
-use Baelle\BallTypes\ball;
 
-$ball[] = new ball("Fußball", 40.5,"Gummi");
-$ball[] = new ball("Basketball", 60, "Plastik");
+
+
+
+$balls = new ball("Fußball", 40.5,"Gummi");
+
+$balls->getName();
+
+$zahl = 50;
+
+
+        $myBall[] = [$balls->getName(),
+                      $balls->getDurchmesser(),
+                      $balls->getMaterial()];
 
 
 
@@ -20,8 +34,10 @@ $paths->setTemplatePathAndFilename(__DIR__ . '/Templates/BallListe.html');
 
 $view->assignMultiple(
     array(
-        "Balls" => $ball
+        "Balls" => $myBall
     )
+
+
 );
 
 $output = $view->render();

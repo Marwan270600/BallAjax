@@ -1,29 +1,14 @@
 <?php
 
-
-require_once "./vendor/autoload.php";
-
-require_once  "Baelle\BallTypes\AbstractBall.php";
-require_once  "Baelle\BallTypes\ball.php";
-include  "Baelle\BallTypes\AbstractBall.php";
-include  "Baelle\BallTypes\ball.php";
-
+namespace htl3r\ajaxballs;
+require_once "vendor/autoload.php";
+use marwan\libary\AbstractBall;
+use marwan\libary\basketball;
+use marwan\libary\volleyball;
+use marwan\libary\fußball;
 
 
-
-
-$balls = new ball("Fußball", 40.5,"Gummi");
-
-$balls->getName();
-
-$zahl = 50;
-
-
-        $myBall[] = [$balls->getName(),
-                      $balls->getDurchmesser(),
-                      $balls->getMaterial()];
-
-
+$ball1 = new Fußball("WM-Ball-2014",20, "Leder" );
 
 
 $view = new \TYPO3Fluid\Fluid\View\TemplateView();
@@ -34,7 +19,7 @@ $paths->setTemplatePathAndFilename(__DIR__ . '/Templates/BallListe.html');
 
 $view->assignMultiple(
     array(
-        "Balls" => $myBall
+        "ball1" => $ball1
     )
 
 

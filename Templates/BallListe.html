@@ -7,9 +7,9 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <f:for each="{Balls}" as="ball">
-        <p>Name: {new ball()}</p>
-        <p>Durchmesser: {ball.getDurchmesser()}</p>
+    <f:for each="{ball1}" as="ball">
+        <p>Name: {ball.name}</p>
+        <p>Durchmesser: {ball.durchmesser}</p>
         <p>Material: {ball.material}</p>
     </f:for>
 </body>

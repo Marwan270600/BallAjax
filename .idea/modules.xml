@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Baelle4bi/.idea/Baelle.iml" filepath="$PROJECT_DIR$/../Baelle4bi/.idea/Baelle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BallAjax-master.iml" filepath="$PROJECT_DIR$/.idea/BallAjax-master.iml" />
     </modules>
   </component>
 </project>

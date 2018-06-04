@@ -11,7 +11,8 @@
 
     "require": {
         "marwan/libary": "@dev",
-        "typo3fluid/fluid": "^2.5"
+        "typo3fluid/fluid": "^2.5",
+        "endroid/qr-code": "^3.2"
     },
 
 
